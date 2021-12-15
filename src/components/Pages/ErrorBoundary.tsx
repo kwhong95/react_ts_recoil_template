@@ -12,7 +12,7 @@ type State = {
 
 class ErrorBoundary extends Component<Props, State> {
   state: State = {
-    error: true,
+    error: false,
   };
 
   static getDerivedStateFromError(e: Error): State {
