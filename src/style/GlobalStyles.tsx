@@ -7,6 +7,8 @@ const GlobalStyles = createGlobalStyle<any>`
   }
 
   body {
+    overflow-x: hidden;
+    letter-spacing: -0.05em;
     margin: 0;
     height: 100%;
     widht: 100%;
@@ -39,6 +41,15 @@ const GlobalStyles = createGlobalStyle<any>`
   a {
     font-family: inherit;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--balck)
+  }
+
+  p {
+    line-heihgt: 1.6;
   }
 
   :root {

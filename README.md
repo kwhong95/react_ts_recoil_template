@@ -1,5 +1,14 @@
 # 나만의 리액트 앱 빌드업 템플릿이라고 할까?
 
+## Used?
+
+- React
+- Typescript
+- React-Router-Dom V6
+- Recoil.js
+- Styled-Components
+- React-Helmet
+
 ## ErrorBoundary?
 
 > 하위 컴포넌트 트리의 어디에서든 Error를 기록하고 깨진 컴포넌트 트리 대신 Fallback UI를 보여준다.
