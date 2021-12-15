@@ -4,7 +4,9 @@ import ErrorBoundary from "./components/Pages/ErrorBoundary";
 const Router = () => {
   return (
     <BrowserRouter>
-      <ErrorBoundary>Initial App</ErrorBoundary>
+      <ErrorBoundary>
+        <div>Initial App</div>
+      </ErrorBoundary>
     </BrowserRouter>
   );
 };
