@@ -1,11 +1,17 @@
-import React from "react";
 import { Helmet } from "react-helmet";
+import Atoms from "../Atoms";
 
 const Home = () => {
   return (
-    <div>
+    <Atoms.Div height="100%">
       <Helmet title="Home" />
-    </div>
+      <Atoms.Section>
+        <h1>Hello This is Home</h1>
+      </Atoms.Section>
+      <Atoms.Section>
+        <h1>2nd Section!</h1>
+      </Atoms.Section>
+    </Atoms.Div>
   );
 };
 
