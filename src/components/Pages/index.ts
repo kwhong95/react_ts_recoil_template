@@ -1,4 +1,5 @@
 import ErrorBoundary from './ErrorBoundary';
 import Home from './Home';
+import About from './About';
 
-export { ErrorBoundary, Home }
+export { ErrorBoundary, Home, About }

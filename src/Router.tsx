@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ErrorBoundary from "./components/Pages/ErrorBoundary";
-import { Home } from "./components/Pages";
+import { About, Home } from "./components/Pages";
 import { Navigation } from "./components/Molecules";
 
 const Router = () => {
@@ -12,6 +12,7 @@ const Router = () => {
           <Navigation />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </Suspense>
       </ErrorBoundary>

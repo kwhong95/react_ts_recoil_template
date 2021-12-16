@@ -14,9 +14,9 @@ const Navigation = () => {
           justifyContent="space-between"
         >
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/">About</NavLink>
-          <NavLink to="/">Project</NavLink>
-          <NavLink to="/">Contact</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/project">Project</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </Atoms.Div>
       </Atoms.Nav>
       <Atoms.Nav type="local">
