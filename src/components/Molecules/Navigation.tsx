@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import Atoms from "../Atoms";
+import { pages } from "../Pages";
 
 const Navigation = () => {
   return (
@@ -13,10 +14,15 @@ const Navigation = () => {
           margin="0 auto"
           justifyContent="space-between"
         >
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/project">Project</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          {pages.map((page, idx) => (
+            <NavLink
+              key={idx}
+              to={page.path}
+              style={({ isActive }) => ({ color: isActive ? "gray" : "black" })}
+            >
+              {page.title}
+            </NavLink>
+          ))}
         </Atoms.Div>
       </Atoms.Nav>
       <Atoms.Nav type="local">
