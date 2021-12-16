@@ -1,3 +1,4 @@
 import Navigation from './Navigation';
+import Content from './Content';
 
-export { Navigation }
+export { Navigation, Content }
