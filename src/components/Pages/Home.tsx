@@ -1,11 +1,15 @@
 import { Helmet } from "react-helmet";
 import Atoms from "../Atoms";
 import { Content } from "../Molecules";
+import { useRecoilState } from "recoil";
+import { CurrentSection } from "../../state";
 
 const Home = () => {
+  const [currentSection, updateCurrentSection] = useRecoilState(CurrentSection);
+
   return (
-    <Atoms.Div height="100%">
-      <Helmet title="Home" />
+    <Atoms.Container currentSection={currentSection}>
+      <Helmet title="KWHong|HOME" />
       <Atoms.Section>
         <Atoms.Title>Front End Developer</Atoms.Title>
         <Content sticky>
@@ -15,7 +19,7 @@ const Home = () => {
       <Atoms.Section>
         <Atoms.Title>2nd Section!</Atoms.Title>
       </Atoms.Section>
-    </Atoms.Div>
+    </Atoms.Container>
   );
 };
 
