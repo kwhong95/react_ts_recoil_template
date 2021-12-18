@@ -3,13 +3,17 @@ import { RecoilRoot } from "recoil";
 import ReactDOM from "react-dom";
 import Router from "./Router";
 import GlobalStyles from "./style/GlobalStyles";
+import { ApolloProvider } from "@apollo/client";
+import client from "./services/apollo";
 
 ReactDOM.render(
   <React.StrictMode>
-    <RecoilRoot>
-      <Router />
-      <GlobalStyles />
-    </RecoilRoot>
+    <ApolloProvider client={client}>
+      <RecoilRoot>
+        <Router />
+        <GlobalStyles />
+      </RecoilRoot>
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
