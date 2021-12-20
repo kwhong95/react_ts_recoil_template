@@ -30,7 +30,6 @@ const useLoading = ({
 
     // if component unmounts while in loading state,we need to make
     // sure we cleanup with `useEffect` unsubscribe (end loading state)
-    
     return () => {
       removeLoaingState();
     };

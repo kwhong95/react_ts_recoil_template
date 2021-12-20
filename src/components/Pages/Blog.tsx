@@ -1,17 +1,14 @@
 import Atoms from "../Atoms";
-import { useQuery } from "@apollo/react-hooks";
-import { useRecoilState } from "recoil";
-import postDataState from "../../state/postData";
-import { GET_POSTS } from "../../services/query";
-import { useEffect } from "react";
+import usePostData from "../../state/postData";
 
 const Blog = () => {
-  const [postData, setPostData] = useRecoilState(postDataState);
-  const { data } = useQuery(GET_POSTS);
-
-  useEffect(() => {
-    setPostData(data);
+  const { postData, loading } = usePostData({
+    loadingId: "postData",
   });
+
+  if (loading) {
+    return null;
+  }
 
   console.log(postData);
 
