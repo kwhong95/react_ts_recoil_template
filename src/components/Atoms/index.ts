@@ -4,6 +4,7 @@ import Section from './Section';
 import Title from './Title';
 import Text from './Text';
 import Container from './Container';
+import Img from './Img';
 
 export default {
   Div,
@@ -11,5 +12,6 @@ export default {
   Section,
   Title,
   Text,
-  Container
+  Container,
+  Img
 }

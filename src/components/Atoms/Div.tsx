@@ -52,6 +52,9 @@ const Div = styled.div<React.CSSProperties>`
   z-index: ${({ zIndex }) => zIndex};
   animation: ${({ animation }) => animation};
   transform: ${({ transform }) => transform};
+  ${({ gridTemplateColumns }) =>
+    gridTemplateColumns && `grid-template-columns: ${gridTemplateColumns}`};
+  gap: ${({ gap }) => gap};
 `;
 
 export default Div;
