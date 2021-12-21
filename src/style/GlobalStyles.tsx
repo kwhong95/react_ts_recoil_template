@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
 
 const GlobalStyles = createGlobalStyle<any>`
+  ${reset}
   html {
     height: 100%;
     width: 100%;
