@@ -1,10 +1,13 @@
 import Atoms from "../Atoms";
 import styled from "styled-components";
+import PostWidget from "./PostWidget";
 
 const PostSider = () => {
   return (
     <Container>
-      <Devider position="relative" top="2rem"></Devider>
+      <Devider position="relative" top="2rem">
+        <PostWidget />
+      </Devider>
     </Container>
   );
 };

@@ -1,8 +1,8 @@
 import Atoms from "../Atoms";
 import styled from "styled-components";
 import { useQuery } from "@apollo/client";
-import { GET_POSTS } from "../../services/query";
-import type { IResult } from "../../services/query";
+import { GET_POSTS } from "../../services/getPosts";
+import type { IResult } from "../../services/getPosts";
 import { PostCard, PostSider } from "../Molecules";
 import { FeaturedPosts } from ".";
 

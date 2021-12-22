@@ -8,7 +8,6 @@ interface PostCardProps {
 }
 
 const PostCard: React.FC<PostCardProps> = ({ post }) => {
-  console.log(post);
   return (
     <ResponsiveDiv
       background="white"
