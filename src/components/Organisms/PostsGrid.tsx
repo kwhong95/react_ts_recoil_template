@@ -1,8 +1,10 @@
 import Atoms from "../Atoms";
+import styled from "styled-components";
 import { useQuery } from "@apollo/client";
 import { GET_POSTS } from "../../services/query";
 import type { IResult } from "../../services/query";
-import { PostCard } from "../Molecules";
+import { PostCard, PostSider } from "../Molecules";
+import { FeaturedPosts } from ".";
 
 const PostsGrid = () => {
   const { data, loading, error } = useQuery<IResult | null>(GET_POSTS);
@@ -15,26 +17,26 @@ const PostsGrid = () => {
   if (error) return <div>error!</div>;
 
   return (
-    <Atoms.Div
-      display="grid"
-      gridTemplateColumns="repeat(1, minmax(0, 1fr))"
-      gap="12rem"
-    >
-      <Atoms.Div gridColumn="span 1 / span 1">
+    <ResponsiveDiv display="grid" gap="12rem">
+      <FeaturedPosts />
+      <ResponsiveDiv>
         {posts?.map((post: any) => (
           <PostCard post={post.node} key={post.title} />
         ))}
-      </Atoms.Div>
-      <Atoms.Div gridColumn="span 1 / span 1">
-        <Atoms.Div gridColumn="span 1 / span 1">
-          <Atoms.Div position="relative" top="2rem">
-            <Atoms.Div>PostWidget</Atoms.Div>
-            <Atoms.Div>Categories</Atoms.Div>
-          </Atoms.Div>
-        </Atoms.Div>
-      </Atoms.Div>
-    </Atoms.Div>
+      </ResponsiveDiv>
+      <PostSider />
+    </ResponsiveDiv>
   );
 };
 
 export default PostsGrid;
+
+const ResponsiveDiv = styled(Atoms.Div)`
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-column: span 1 / span 1;
+
+  ${({ theme }) => theme.media.desktop`
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-column: span 8 / span 8;
+  `}
+`;

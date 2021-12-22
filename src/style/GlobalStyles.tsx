@@ -64,6 +64,7 @@ const GlobalStyles = createGlobalStyle<any>`
   --primary-100: #f4f5fb;
   --black: #141721;
   --deepgrey: #343742;
+  --grey-700: rgb(55 65 81);
   --grey-500: #525561;
   --grey-400: #8d909d;
   --grey-300: #b9bcc1;
@@ -75,6 +76,8 @@ const GlobalStyles = createGlobalStyle<any>`
   --orange: #ffa100;
   --coral: #ff5268;
   --red-400: #fc2b38;
+  --pink-500: rgb(236 72 153);
+  --pink-600: rgb(219 39 119);
   --minus-margin-android: 0px -16px;
   --minus-margin-ios: 0px -24px;
   --minus-margin-undefined: 0px -24px;
